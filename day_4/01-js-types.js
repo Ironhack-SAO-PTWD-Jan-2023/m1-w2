@@ -84,3 +84,100 @@ console.log('aspas simples', "aspas duplas", `backticks/crase/template literals`
 
 const studentName = "Vitor";
 console.log(`${studentName} caminha ${(10 / 3).toFixed(2)} km por dia.`);
+
+// antes do ES6
+var customer1 = {
+  firstName: 'Daniel',
+  lastName: 'K. Albanez'
+}
+var msg1 = 'Olá ' + customer1.firstName + ' ' + customer1.lastName + '!';
+console.log(msg1);
+
+// depois do ES6
+const customer2 = {
+  firstName: 'Bruno',
+  lastName: 'K. Albanez'
+}
+const msg2 = `Olá ${customer2.firstName} ${customer2.lastName}!`;
+console.log(msg2);
+
+console.log('-- caracteres especiais --');
+const favoriteMovie = "Meu filme favorito é o 'Tudo e Todo lugar ao mesmo tempo'.";
+console.log(favoriteMovie);
+const message = 'I\'m Ok!'
+console.log(message);
+
+const fruits1 = '1. banana\n2. goiaba\n3. abacaxi';
+console.log(fruits1);
+const fruits2 = `1. banana
+2. goiaba
+3. abacaxi`;
+console.log(fruits2);
+
+console.log(message.length);
+
+console.log('-- métodos de string --')
+
+// concatenar
+let stringContainer = '';
+console.log(stringContainer);
+stringContainer += 'Olá, mundo!';
+console.log(stringContainer);
+stringContainer += ' Como vai?';
+console.log(stringContainer);
+
+// acessando caracteres
+const greeting = 'Olá! Seja bem vindo!';
+console.log(`"${greeting}" é uma string com comprimento de ${greeting.length} caracteres`);
+
+// utilizando o charAt(n)
+console.log(greeting.charAt(0));
+console.log(greeting.charAt(1));
+console.log(greeting.charAt(2));
+console.log(greeting.charAt(19));
+console.log(greeting.charAt(99));
+
+// utilizando o índice
+console.log(greeting[0]);
+console.log(greeting[1]);
+console.log(greeting[2]);
+console.log(greeting[19]);
+console.log(greeting[99]);
+
+// encontrando o índice por um caractere/substring
+const example = 'Não se preocupe! Não precisa chorar!';
+console.log(example.indexOf('Não'));
+console.log(example.indexOf('e'));
+console.log(example.indexOf('não'));
+console.log(example.indexOf('r!'));
+
+console.log(example.indexOf('Não', 3));
+
+// repetir a mesma string
+console.log('Uma string!'.repeat(3));
+console.log(`${'na '.repeat(20)}, Batman!`);
+
+// selecionando uma substring/trecho pelo índice
+let comSubstring = example.substring(example.length - 3, example.length);
+console.log(comSubstring);
+// let comSubstr = example.substr(0, 3);
+// console.log(comSubstr);
+let comSlice = example.slice(-3);
+console.log(comSlice);
+
+// ordenando strings
+// str1.localeCompare(str2);
+// 1 se str1 > str2
+// -1 se str1 < str2
+// 0 se str1 === str2
+console.log('Miami'.localeCompare('barcelona'));
+
+// .startsWith(str[, posição])
+console.log(example.startsWith('Não'));
+console.log(example.startsWith('Não', 17));
+
+// .endsWith(str[, posição])
+
+// .includes(str[, posição])
+console.log(example.includes('se'));
+console.log(example.includes('não'));
